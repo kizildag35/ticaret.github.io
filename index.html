@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Ticaret</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <button class="tablink" onclick="openPage('Anasayfa', this, 'lightskyblue')" id="defaultOpen"><i class="fa-solid fa-house" style="color: #ffffff;"></i><p class="ptext">Anasayfa</p></button>
+    <button class="tablink" onclick="openPage('Giyim', this, 'lightskyblue')" ><i class="fa-solid fa-shirt" style="color: #ffffff;"></i><p class="ptext">Giyim</p></button>
+    <button class="tablink" onclick="openPage('Elektronik', this, 'lightskyblue')"><i class="fa-solid fa-computer" style="color: #ffffff;"></i><p class="ptext">Elektronik</p></button>
+    <button class="tablink" onclick="openPage('Sepet', this, 'lightskyblue')"><i class="fa-solid fa-basket-shopping" style="color: #ffffff;"></i><p class="ptext">Sepet</p></button>
+    <button class="tablink" onclick="openPage('GirisYap', this, 'lightskyblue')"><i class="fa-solid fa-circle-user" style="color: #ffffff;"></i><p class="ptext">Giriş Yap</p></button>
+ 
+    <div id="Anasayfa" class="tabcontent">
+        <div class="row">
+            
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                    
+                    <img src="./Images/kadingiyim1.jpg" style="width:100%; border-radius: 20px; border: 5px solid rgb(155, 134, 127);">
+                    
+                    </div>
+                
+                    <div class="mySlides fade">
+                    
+                    <img src="./Images/erkekgiyim1.jpg" style="width:100%; border-radius: 20px; border: 5px solid rgb(155, 134, 127);">
+                    
+                    </div>
+                
+                    <div class="mySlides fade">
+                    
+                    <img src="./Images/cocukgiyim1.jpg" style="width:100%; border-radius: 20px; border: 5px solid rgb(155, 134, 127);">
+                    
+                    </div>
+
+                    <div class="mySlides fade">
+                        
+                        <img src="./Images/evelektronigi1.jpg" style="width:100%; border-radius: 20px; border: 5px solid rgb(155, 134, 127);">
+                        
+                    </div>
+                
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            <div class="column" >
+                <div class="card" data-id="41" data-name="Sherpa Trucker Ceket" data-price="4099,90" style="border: 2px solid rgb(155, 134, 127);">
+                    <img src="https://st-levis.mncdn.com/mnresize/3000/1075/Content/media/ProductImg/original/638223179874313995.jpg" alt="Sherpa Trucker Ceket" style="width:100%">
+                    <h4><img src="./Images/levis.png" alt="levis" style="width: 70px; height: 70px;">Sherpa Trucker Ceket</h4>
+                    <p class="price">4099,90 TL</p>
+                    <p><button onclick="addToCart(41)">Sepete Ekle</button></p>
+                </div>
+                <br>
+                <div class="card" data-id="42" data-name="Chukka Sneaker" data-price="2299,95" style="border: 2px solid rgb(155, 134, 127);">
+                    <img src="https://st-levis.mncdn.com/mnresize/3000/1075/Content/media/ProductImg/original/638310279526380622.jpg" alt="Chukka Sneaker" style="width:100%">
+                    <h4><img src="./Images/levis.png" alt="levis" style="width: 70px; height: 70px;">Chukka Sneaker</h4>
+                    <p class="price">2299,95 TL</p>
+                    <p><button onclick="addToCart(42)">Sepete Ekle</button></p>
+                </div>
+            </div>
+            
+            <div class="column">
+                <div class="card" data-id="43" data-name="Western Gömlek" data-price="1924,95" style="border: 2px solid rgb(155, 134, 127);">
+                    <img src="https://st-levis.mncdn.com/mnresize/3000/1075/Content/media/ProductImg/original/638247375411259545.jpg" alt="Western Gömlek" style="width:100%">
+                    <h4><img src="./Images/levis.png" alt="levis" style="width: 70px; height: 70px;">Western Gömlek</h4>
+                    <p class="price">1924,95 TL</p>
+                    <p><button onclick="addToCart(43)">Sepete Ekle</button></p>
+                </div>
+                <br>
+                <div class="card" data-id="44" data-name="Wing Sneaker" data-price="1999,90" style="border: 2px solid rgb(155, 134, 127);">
+                    <img src="https://st-levis.mncdn.com/mnresize/3000/1075/Content/media/ProductImg/original/638309413989615435.jpg" alt="Wing Sneaker" style="width:100%">
+                    <h4><img src="./Images/levis.png" alt="levis"style="width: 70px; height: 70px;">Wing Sneaker</h4>
+                    <p class="price">1999,90 TL</p>
+                    <p><button onclick="addToCart(44)">Sepete Ekle</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Giyim" class="tabcontent">
+        <div class="tab">
+            <button id="default" class="tabs" onclick="openTab(event, 'Erkek')">Erkek Giyim</button>
+            <button class="tabs" onclick="openTab(event, 'Kadin')">Kadın Giyim</button>
+            <button class="tabs" onclick="openTab(event, 'Cocuk')">Çocuk Giyim</button>
+        </div>
+          
+        
+        <div id="Erkek" class="contents">
+            <div class="row">
+                <div class="column" >
+                    <div class="card" data-id="1" data-name="Tommy Hilfiger Siyah Mont" data-price="5339.90" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty1083/product/media/images/prod/SPM/PIM/20231209/12/d5900ad4-ff8a-349a-9445-9bdcd38fcd79/1_org_zoom.jpg" alt="Tommy Hilfiger Siyah Mont" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Siyah Mont</h4>
+                        <p class="price">5339,90 TL</p>
+                        <p><button onclick="addToCart(1)">Sepete Ekle</button></p>
+                    </div>
+                    <br>
+                    <div class="card" data-id="2" data-name="Tommy Hilfiger Siyah Mont" data-price="3090,90" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty1097/product/media/images/prod/SPM/PIM/20231215/16/551304c7-467c-3268-9303-f8854fa905a7/1_org_zoom.jpg" alt="Tommy Hilfiger Siyah Mont" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Siyah Mont</h4>
+                        <p class="price">3090,99 TL</p>
+                        <p><button onclick="addToCart(2)">Sepete Ekle</button></p>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="card" data-id="3" data-name="Tommy Hilfiger Logolu Kapüşonlu Mont" data-price="3090,99" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty1074/product/media/images/prod/SPM/PIM/20231130/21/d4b85bd0-b2cb-316c-a0ce-95ab88e0533f/1_org_zoom.jpg" alt="Tommy Hilfiger Logolu Kapüşonlu Mont" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Logolu Kapüşonlu Mont</h4>
+                        <p class="price">3090,99 TL</p>
+                        <p><button onclick="addToCart(3)">Sepete Ekle</button></p>
+                    </div>
+                    <br>
+                    <div class="card" data-id="4" data-name="Tommy Hilfiger Logolu Sweatshirt" data-price="1790,99" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty1021/product/media/images/prod/SPM/PIM/20231023/03/325cebef-1771-31a3-8e51-a9e44784e96d/1_org_zoom.jpg" alt="Tommy Hilfiger Core Logolu Sweatshirt" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Core Logolu Sweatshirt</h4>
+                        <p class="price">1790,99 TL</p>
+                        <p><button onclick="addToCart(4)">Sepete Ekle</button></p>
+                    </div>
+                </div>
+                
+                <div class="column" >
+                    
+                    <div class="card" data-id="5" data-name="Tommy Hilfiger Bağcıklıklı Siyah Sneaker" data-price="2129,99" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty1074/product/media/images/prod/SPM/PIM/20231130/21/9a89afe0-60b4-3e68-8c46-c5c67dc76c87/1_org_zoom.jpg" alt="Tommy Hilfiger Bağcıklıklı Siyah Sneaker" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Bağcıklıklı Siyah Sneaker</h4>
+                        <p class="price">2129,99 TL</p>
+                        <p><button onclick="addToCart(5)">Sepete Ekle</button></p>
+                    </div>
+                    <br>
+                    <div class="card" data-id="6" data-name="Tommy Hilfiger Fit Kadife Gömlek" data-price="1919,99" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty989/product/media/images/prod/SPM/PIM/20230824/01/657dbef3-d899-3421-b27e-e1992884a28a/1_org_zoom.jpg" alt="Tommy Hilfiger Fit Kadife Gömlek" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Fit Kadife Gömlek</h4>
+                        <p class="price">1919,99 TL</p>
+                        <p><button onclick="addToCart(6)">Sepete Ekle</button></p>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    
+                    <div class="card" data-id="7" data-name="Tommy Hilfiger Siyah Corp Mini Cüzdan" data-price="1709,99" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty1081/product/media/images/prod/PIM/20231207/11/2cb34463-af10-48de-afec-6048ed88867a/1_org_zoom.jpg" alt="Tommy Hilfiger Siyah Corp Mini Cüzdan" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Siyah Corp Mini Cüzdan</h4>
+                        <p class="price">1709,90 TL</p>
+                        <p><button onclick="addToCart(7)">Sepete Ekle</button></p>
+                    </div>
+                    <br>
+                    <div class="card" data-id="8" data-name="Tommy Hilfiger 50 Ml Parfüm" data-price="594,50" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty519/product/media/images/20220831/13/167178143/7134686/1/1_org_zoom.jpg" alt="Tommy Hilfiger 50 Ml Parfüm" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>50 Ml Parfüm</h4>
+                        <p class="price">594,50 TL</p>
+                        <p><button onclick="addToCart(8)">Sepete Ekle</button></p>
+                    </div>
+                </div>
+                
+                <div class="column" >
+                    
+                    <div class="card" data-id="9" data-name="Tommy Hilfiger 4'lü Boxer Seti" data-price="849,50" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty1042/product/media/images/prod/SPM/PIM/20231113/22/b964970c-926b-38d6-b7ee-cca5473c91b3/1_org_zoom.jpg" alt="Tommy Hilfiger 4'lü Boxer Set" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>4'lü Boxer Set</h4>
+                        <p class="price">849,50 TL</p>
+                        <p><button onclick="addToCart(9)">Sepete Ekle</button></p>
+                    </div>
+                    <br>
+                    <div class="card" data-id="10" data-name="Tommy Hilfiger Logolu Deri Kemer" data-price="1090,55" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty967/product/media/images/20230719/13/394999999/979951147/1/1_org_zoom.jpg" alt="Tommy Hilfiger Logolu Deri Kemer" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Logolu Deri Kemer</h4>
+                        <p class="price">1090,55 TL</p>
+                        <p><button onclick="adToCart(10)">Sepete Ekle</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Kadin" class="contents">
+            <div class="row">
+                <div class="column" >
+                    <div class="card" data-id="11" data-name="Tommy Hilfiger Tape Kapüşonlu Mont" data-price="3269,90" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty779/product/media/images/20230314/11/303234245/885787526/1/1_org_zoom.jpg" alt="Tommy Hilfiger Tape Kapüşonlu Mont" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Tape Kapüşonlu Mont</h4>
+                        <p class="price">3269,90 TL</p>
+                        <p><button onclick="addToCart(11)">Sepete Ekle</button></p>
+                    </div>
+                    <br>
+                    <div class="card" data-id="12" data-name="Tommy Hilfiger Baskılı Beyaz T-Shirt" data-price="869,95" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty996/product/media/images/prod/SPM/PIM/20230910/03/a465305c-abb4-3ee8-be3d-7329a91d565c/1_org_zoom.jpg" alt="Tommy Hilfiger Baskılı Beyaz T-Shirt" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Baskılı Beyaz T-Shirt</h4>
+                        <p class="price">869,95 TL</p>
+                        <p><button onclick="addToCart(12)">Sepete Ekle</button></p>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="card" data-id="13" data-name="Tommy Hilfiger Logolu Beyaz Sneaker" data-price="5467,90" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty1078/product/media/images/prod/SPM/PIM/20231205/16/91d0c1f1-1f70-3828-918c-35551b380ecb/1_org_zoom.jpg" alt="Tommy Hilfiger Logolu Kapüşonlu Mont" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Logolu Beyaz Sneaker</h4>
+                        <p class="price">5467,90 TL</p>
+                        <p><button onclick="addToCart(13)">Sepete Ekle</button></p>
+                    </div>
+                    <br>
+                    <div class="card" data-id="14" data-name="Tommy Hilfiger Alaska Puffer" data-price="5339,99" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty674/product/media/images/20230104/22/251997181/662357648/1/1_org_zoom.jpg" alt="Tommy Hilfiger Siyah Alaska Puffer" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Siyah Alaska Puffer</h4>
+                        <p class="price">5339,99 TL</p>
+                        <p><button onclick="addToCart(14)">Sepete Ekle</button></p>
+                    </div>
+                </div>
+                
+                <div class="column" >
+                    
+                    <div class="card" data-id="15" data-name="Tommy Hilfiger Gri Uzun Kollu Sweat" data-price="4157,99" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty1028/product/media/images/prod/SPM/PIM/20231031/08/805cf864-d2ba-34cc-b2f9-a192a4877098/1_org_zoom.jpg" alt="Tommy Hilfiger Gri Uzun Kollu Sweat" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Gri Uzun Kollu Sweat</h4>
+                        <p class="price">4157,99 TL</p>
+                        <p><button onclick="addToCart(15)">Sepete Ekle</button></p>
+                    </div>
+                    <br>
+                    <div class="card" data-id="16" data-name="Tommy Hilfiger Light Down Jacket" data-price="3099,99" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty639/product/media/images/20221212/19/235165668/647020835/1/1_org_zoom.jpg" alt="Tommy Hilfiger Light Down Jacket" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Light Down Jacket</h4>
+                        <p class="price">3099,99 TL</p>
+                        <p><button onclick="addToCart(16)">Sepete Ekle</button></p>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    
+                    <div class="card" data-id="17" data-name="Tommy Hilfiger Beyaz Omuz Çantası" data-price="1454,90" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty1022/product/media/images/prod/SPM/PIM/20231021/00/56c09164-25fa-3900-81af-6ddf9c0d7bf7/1_org_zoom.jpg" alt="Tommy Hilfiger Beyaz Omuz Çantası" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Beyaz Omuz Çantası</h4>
+                        <p class="price">1454,90 TL</p>
+                        <p><button onclick="addToCart(17)">Sepete Ekle</button></p>
+                    </div>
+                    <br>
+                    <div class="card" data-id="18" data-name="Tommy Hilfiger Kapüşonlu Mont" data-price="3690,50" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty1022/product/media/images/prod/SPM/PIM/20231023/16/6f6ac710-d266-3742-ad4e-9b229d5c7296/1_org_zoom.jpg" alt="Tommy Hilfiger Kapüşonlu Mont" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Kapüşonlu Mont</h4>
+                        <p class="price">3690,50 TL</p>
+                        <p><button onclick="addToCart(18)">Sepete Ekle</button></p>
+                    </div>
+                </div>
+                
+                <div class="column" >
+                    
+                    <div class="card" data-id="19" data-name="Tommy Hilfiger Denim Pantolon" data-price="1599,50" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty990/product/media/images/prod/SPM/PIM/20230831/02/f075fd32-3ce4-3bb6-928a-737f9c301f9a/1_org_zoom.jpg" alt="Tommy Hilfiger Denim Pantolon" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Denim Pantolon</h4>
+                        <p class="price">1599,50 TL</p>
+                        <p><button onclick="addToCart(19)">Sepete Ekle</button></p>
+                    </div>
+                    <br>
+                    <div class="card" data-id="20" data-name="Tommy Hilfiger Mavi Jean Pantolon" data-price="2129,55" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty999/product/media/images/prod/PIM/20230915/12/d6017be9-7e22-43ff-b2d8-6e1bc4db3280/1_org_zoom.jpg" alt="Tommy Hilfiger Mavi Jean Pantolon" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Mavi Jean Pantolon</h4>
+                        <p class="price">2129,55 TL</p>
+                        <p><button onclick="addToCart(20)">Sepete Ekle</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+          
+        <div id="Cocuk" class="contents">
+            <div class="row">
+                <div class="column" >
+                    <div class="card" data-id="21" data-name="Tommy Hilfiger Pembe Çocuk Sırt Çantası" data-price="1290,90" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty1004/product/media/images/prod/SPM/PIM/20230921/15/d50ea9ac-776e-3cb1-ac56-16fa4be496ba/1_org_zoom.jpg" alt="Tommy Hilfiger Pembe Çocuk Sırt Çantası" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Pembe Çocuk Sırt Çantası</h4>
+                        <p class="price">1290,90 TL</p>
+                        <p><button onclick="addToCart(21)">Sepete Ekle</button></p>
+                    </div>
+                    <br>
+                    <div class="card" data-id="22" data-name="Tommy Hilfiger Lacivert Gömlek" data-price="1799,95" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty1026/product/media/images/prod/SPM/PIM/20231030/10/db28d393-edf1-3db3-befe-e7887efa65b8/1_org_zoom.jpg" alt="Tommy Hilfiger Lacivert Gömlek" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Lacivert Gömlek</h4>
+                        <p class="price">1799,95 TL</p>
+                        <p><button onclick="addToCart(22)">Sepete Ekle</button></p>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="card" data-id="23" data-name="Tommy Hilfiger Lacivert Eşofman Takımı" data-price="2200,90" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty1000/product/media/images/prod/SPM/PIM/20230916/03/03565e1b-38ce-3ea9-b5ad-030727cc13fa/1_org_zoom.jpg" alt="Tommy Hilfiger Lacivert Eşofman Takımı" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Lacivert Eşofman Takımı</h4>
+                        <p class="price">2200,90 TL</p>
+                        <p><button onclick="addToCart(23)">Sepete Ekle</button></p>
+                    </div>
+                    <br>
+                    <div class="card" data-id="24" data-name="Tommy Hilfiger Kırmızı Sweatshirt" data-price="1740,99" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty1030/product/media/images/prod/SPM/PIM/20231101/13/a41a35c1-b52f-3fe8-8461-cde646b4d832/1_org_zoom.jpg" alt="Tommy Hilfiger Kırmızı Sweatshirt" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Kırmızı Sweatshirt</h4>
+                        <p class="price">1740,99 TL</p>
+                        <p><button onclick="addToCart(24)">Sepete Ekle</button></p>
+                    </div>
+                </div>
+                
+                <div class="column" >
+                    
+                    <div class="card" data-id="25" data-name="Tommy Hilfiger Logolu Sneaker" data-price="1544,40" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty975/product/media/images/20230802/12/399366391/985411560/1/1_org_zoom.jpg" alt="Tommy Hilfiger Logolu Sneaker" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Logolu Sneaker</h4>
+                        <p class="price">1544,40 TL</p>
+                        <p><button onclick="addToCart(25)">Sepete Ekle</button></p>
+                    </div>
+                    <br>
+                    <div class="card" data-id="26" data-name="Tommy Hilfiger Erkek Yeşil Mont" data-price="4040,99" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty1021/product/media/images/prod/SPM/PIM/20231024/14/a40876f6-7cf3-3688-9b9c-a3f747cd64fa/1_org_zoom.jpg" alt="Tommy Hilfiger Erkek Yeşil Mont" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Erkek Yeşil Mont</h4>
+                        <p class="price">4040,99 TL</p>
+                        <p><button onclick="addToCart(26)">Sepete Ekle</button></p>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    
+                    <div class="card" data-id="27" data-name="Tommy Hilfiger Mavi Sweatshirt" data-price="859,90" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty526/product/media/images/20220910/10/171496704/562064218/1/1_org_zoom.jpg" alt="Tommy Hilfiger Mavi Sweatshirt" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Mavi Sweatshirt</h4>
+                        <p class="price">859,90 TL</p>
+                        <p><button onclick="addToCart(27)">Sepete Ekle</button></p>
+                    </div>
+                    <br>
+                    <div class="card" data-id="28" data-name="Tommy Hilfiger Bebek Zıbın" data-price="619,95" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty1031/product/media/images/prod/SPM/PIM/20231103/10/7912df64-ec3a-3bb5-8b1e-701c5b8334d4/1_org_zoom.jpg" alt="Tommy Hilfiger Bebek Zıbın" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Bebek Zıbın</h4>
+                        <p class="price">619,95 TL</p>
+                        <p><button onclick="addToCart(28)">Sepete Ekle</button></p>
+                    </div>
+                </div>
+                
+                <div class="column" >
+                    
+                    <div class="card" data-id="29" data-name="Tommy Hilfiger Lacivert Logolu Bere" data-price="968,50" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty1098/product/media/images/prod/SPM/PIM/20231215/01/5ffe2665-4b28-38b9-b389-8e0315dc86f7/1_org_zoom.jpg" alt="Tommy Hilfiger Logolu Bere" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Lacivert Logolu Bere</h4>
+                        <p class="price">968,50 TL</p>
+                        <p><button onclick="addToCart(29)">Sepete Ekle</button></p>
+                    </div>
+                    <br>
+                    <div class="card" data-id="30" data-name="Tommy Hilfiger Siyah Sırt Çantası" data-price="2129,55" style="border: 2px solid rgb(155, 134, 127);">
+                        <img src="https://cdn.dsmcdn.com/ty1017/product/media/images/prod/SPM/PIM/20231019/11/253d8e41-95c5-3e34-93bf-f820b9fec8fd/1_org_zoom.jpg" alt="Tommy Hilfiger Siyah Sırt Çantası" style="width:100%">
+                        <h4>Tommy Hilfiger</h4>
+                        <h4>Siyah Sırt Çantası</h4>
+                        <p class="price">2129,55 TL</p>
+                        <p><button onclick="addToCart(30)">Sepete Ekle</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Elektronik" class="tabcontent">
+        <div class="row">
+            <div class="column" >
+                <div class="card" data-id="31" data-name="Roborock S7 Pro Robot Süpürge" data-price="42880,90" style="border: 2px solid rgb(155, 134, 127);">
+                    <img src="https://cdn.dsmcdn.com/ty1000/product/media/images/prod/SPM/PIM/20230915/08/965211e9-cd4c-3e4f-9f5d-c3c36e8c3baf/1_org_zoom.jpg" alt="Roborock S7 Pro Robot Süpürge" style="width:100%">
+                    <h4>Roborock</h4>
+                    <h4>S7 Pro Robot Süpürge</h4>
+                    <p class="price">42880,90 TL</p>
+                    <p><button onclick="addToCart(31)">Sepete Ekle</button></p>
+                </div>
+                <br>
+                <div class="card" data-id="32" data-name="Xiaomi Beyaz 3.5 Litre Airfryer" data-price="2169,95" style="border: 2px solid rgb(155, 134, 127);">
+                    <img src="https://cdn.dsmcdn.com/ty1027/product/media/images/prod/PIM/20231101/10/5aeae701-a765-43b4-b0f6-ced6867aeb5e/1_org_zoom.jpg" alt="Xiaomi Beyaz 3.5 Litre Airfryer" style="width:100%">
+                    <h4>Xiaomi</h4>
+                    <h4>Beyaz 3.5 Litre Airfryer</h4>
+                    <p class="price">2169,95 TL</p>
+                    <p><button onclick="addToCart(32)">Sepete Ekle</button></p>
+                </div>
+            </div>
+            
+            <div class="column">
+                <div class="card" data-id="33" data-name="Apple Watch Ultra 2 Akıllı Saat" data-price="43000" style="border: 2px solid rgb(155, 134, 127);">
+                    <img src="https://cdn.dsmcdn.com/ty1030/product/media/images/prod/SPM/PIM/20231103/16/3f2a2cba-5827-31cb-b106-c24e3220c04a/1_org_zoom.jpg" alt="Apple Watch Ultra 2 Akıllı Saat" style="width:100%">
+                    <h4>Apple</h4>
+                    <h4>Watch Ultra 2 Akıllı Saat</h4>
+                    <p class="price">43000 TL</p>
+                    <p><button onclick="addToCart(33)">Sepete Ekle</button></p>
+                </div>
+                <br>
+                <div class="card" data-id="34" data-name="Apple Iphone 15 Pro Max 1 TB" data-price="97890" style="border: 2px solid rgb(155, 134, 127);">
+                    <img src="https://cdn.dsmcdn.com/ty1031/product/media/images/prod/PIM/20231105/16/f0cb20fe-961f-4f28-bdd0-b02d6b089fcc/1_org_zoom.jpg" alt="Apple Iphone 15 Pro Max 1 TB" style="width:100%">
+                    <h4>Apple</h4>
+                    <h4>Iphone 15 Pro Max 1 TB</h4>
+                    <p class="price">97890 TL</p>
+                    <p><button onclick="addToCart(34)">Sepete Ekle</button></p>
+                </div>
+            </div>
+            
+            <div class="column" >
+                
+                <div class="card" data-id="35" data-name="Apple Iphone 15 ProMax 512 GB" data-price="89999" style="border: 2px solid rgb(155, 134, 127);">
+                    <img src="https://cdn.dsmcdn.com/ty1002/product/media/images/prod/PIM/20230921/07/9ad54364-69dd-45fc-9a54-562901b37704/1_org_zoom.jpg" alt="Apple Iphone 15 Pro Max 512 GB" style="width:100%">
+                    <h4>Apple</h4>
+                    <h4>Iphone 15 Pro Max 512 GB</h4>
+                    <p class="price">89999 TL</p>
+                    <p><button onclick="addToCart(35)">Sepete Ekle</button></p>
+                </div>
+                <br>
+                <div class="card" data-id="36" data-name="Samsung Galaxy Z Fold5 512 GB" data-price="72900" style="border: 2px solid rgb(155, 134, 127);">
+                    <img src="https://cdn.dsmcdn.com/ty1018/product/media/images/prod/SPM/PIM/20231018/12/8fbbb0c9-9289-39be-9b12-80bea4a98f0c/1_org_zoom.jpg" alt="Samsung Galaxy Z Fold5 512 GB" style="width:100%">
+                    <h4>Samsung</h4>
+                    <h4>Galaxy Z Fold5 512 GB</h4>
+                    <p class="price">72900 TL</p>
+                    <p><button onclick="addToCart(36)">Sepete Ekle</button></p>
+                </div>
+            </div>
+            
+            <div class="column">
+                
+                <div class="card" data-id="37" data-name="Playstation 5 Slim 1 TB" data-price="20230" style="border: 2px solid rgb(155, 134, 127);">
+                    <img src="https://cdn.dsmcdn.com/ty1056/product/media/images/prod/SPM/PIM/20231121/14/f554b381-41d3-37b0-ae45-34b45038ae52/1_org_zoom.jpg" alt="Sony Playstation 5 Slim 1 TB" style="width:100%">
+                    <h4>Sony</h4>
+                    <h4>Playstation 5 Slim 1 TB</h4>
+                    <p class="price">20230 TL</p>
+                    <p><button onclick="addToCart(37)">Sepete Ekle</button></p>
+                </div>
+                <br>
+                <div class="card" data-id="38" data-name="Microsoft Xbox Series X 1 TB" data-price="21600" style="border: 2px solid rgb(155, 134, 127);">
+                    <img src="https://cdn.dsmcdn.com/ty31/product/media/images/20201208/22/36627112/117585487/1/1_org_zoom.jpg" alt="Microsoft Xbox Series X 1 TB" style="width:100%">
+                    <h4>Microsoft</h4>
+                    <h4>Xbox Series X 1 TB</h4>
+                    <p class="price">21600 TL</p>
+                    <p><button onclick="addToCart(38)">Sepete Ekle</button></p>
+                </div>
+            </div>
+            
+            <div class="column" >
+                
+                <div class="card" data-id="39" data-name="Apple Macbook Air M1 256GB SSD" data-price="26990" style="border: 2px solid rgb(155, 134, 127);">
+                    <img src="https://cdn.dsmcdn.com/ty1018/product/media/images/prod/SPM/PIM/20231019/13/899e8cb7-16a0-3617-bae0-555eacd2e713/1_org_zoom.jpg" alt="Apple Macbook Air 13M1 8 GB 256 GB SSD" style="width:100%">
+                    <h4>Apple</h4>
+                    <h4>Macbook Air M1 256GB SSD </h4>
+                    <p class="price">26990 TL</p>
+                    <p><button onclick="addToCart(39)">Sepete Ekle</button></p>
+                </div>
+                <br>
+                <div class="card" data-id="40" data-name="Apple Airpods Pro Kulaklık" data-price="12500" style="border: 2px solid rgb(155, 134, 127);">
+                    <img src="https://cdn.dsmcdn.com/ty1036/product/media/images/prod/SPM/PIM/20231107/17/bd3b4e76-d4db-3651-8628-d629fd9e7e2d/1_org_zoom.jpg" alt="Apple Airpods Pro Kulaklık" style="width:100%">
+                    <h4>Apple</h4>
+                    <h4>Airpods Pro Kulaklık</h4>
+                    <p class="price">12500 TL</p>
+                    <p><button onclick="addToCart(40)">Sepete Ekle</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Sepet" class="tabcontent">
+        <div id="cart" class="cart">
+            Sepetiniz boş.
+        </div>
+    </div>
+
+    <div id="GirisYap" class="tabcontent">
+        <div class="container">
+            <form action="/action_page.php">
+                <div class="row1">
+                    <h2 style="color: black; text-align:center">Sosyal Medya ile Giriş Yapın veya Oturum Açın</h2>
+                               
+                    <div class="col">
+                        <a href="#" class="fb btn">
+                            <i class="fa fa-facebook fa-fw"></i> Facebook İle Giriş Yapın
+                        </a>
+                        <a href="#" class="twitter btn">
+                            <i class="fa-brands fa-x-twitter"></i> Twitter İle Giriş Yapın
+                        </a>
+                        <a href="#" class="google btn">
+                            <i class="fa fa-google fa-fw"></i> Google İle Giriş Yapın
+                        </a>
+                    </div>
+            
+                    <div class="col">
+                        <form action="">
+                            <input id="email" type="email" name="username" placeholder="E-mail Adresi" required>
+                            <input id="password" type="password" name="password" placeholder="Şifreniz" required>
+                            <button class="giris" type="button" onclick="saveLoginInfo()">Giriş Yap</button>
+                        </form>
+                    </div>
+          
+                </div>
+            </form>
+        </div>
+          
+        <div class="bottom-container">
+            <div class="row1">
+              <div class="col">
+                <a href="#" style="color:white" class="btn">Kaydol</a>
+              </div>
+              <div class="col">
+                <a href="#" style="color:white" class="btn">Şifremi Unuttum</a>
+              </div>
+            </div>
+         </div>
+    </div>
+    
+    <script src="https://kit.fontawesome.com/a99429908a.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
